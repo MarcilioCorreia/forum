@@ -1,2 +1,6 @@
-# forum
-Forum where you can post or comment others user's posts
+### Forum
+
+- [x] Developed in PHP and SQL.
+
+- By Marcilio Correia
+Developed and modified during the Front End Developer course in IEFP Portugal.
