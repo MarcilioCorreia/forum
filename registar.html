@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FORUM - Marcílio Correia </title>
+    <script>
+        function valida(){
+            if(document.f1.nick.value=="")
+                {
+                    window.alert("ERRO! Deve escrever um nick!");
+                    document.f1.nick.focus();
+                    return false;
+                }
+            else if(document.f1.nome.value=="")
+                {
+                    window.alert("ERRO! Deve escrever um nome!");
+                    document.f1.nome.focus();
+                    return false;
+                }
+            else if(document.f1.email.value=="")
+            {
+                    window.alert("ERRO! Deve escrever um e-mail válido!");
+                    document.f1.email.focus();
+                    return false;
+            }
+            else if(document.f1.data_nasc.value=="")
+            {
+                window.alert("ERRO! Deve escrever uma data válida");
+                document.f1.data.focus();
+                return false;
+            }
+            else if(document.f1.pass.value=="")
+            {
+                window.alert("ERRO! Deve escrever uma password!");
+                document.f1.pass.focus();
+                return false;
+            }
+            else
+                return true;
+                
+            }
+        </script>
+        
+    </head>
+<body>
+    <h1>Registo de Utilizadores</h1>
+    <form action="registo.php" method="post" name="f1" onsubmit="return valida()">
+        <p>Nick:<input type="text" size="20" maxlength="20" name="nick"><br><br></p>
+        <p>Nome:<input type="text" size="100" maxlength="100" name="nome"><br><br></p>
+        <p>E-mail:<input type="email" size="50" maxlength="50" name="email"><br><br></p>
+        <p>Data de Nascimento:<input type="date" size="10" maxlength="10" name="data_nasc"><br><br></p>
+        <p>Pass:<input type="password" size="20" maxlength="20" name="pass"><br><br></p>
+        <p>Foto(url):<br><textarea cols="80" rows="4" name="foto"></textarea><br><br></p>
+        
+        <p>
+    <input type="submit" value="Registar">
+    <br><br>
+    <input type="reset" value="Limpar">
+    <br><br>
+    <input type="button" value="Voltar" onclick="window.history.go(-1);">
+    </p>
+    </form>
+</body>
+</html>
